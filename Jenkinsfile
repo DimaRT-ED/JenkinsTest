@@ -4,7 +4,9 @@ pipeline {
    stages {
 	   stage('Entry'){
 		   steps {
+			   sh '
 			   echo U chouse to run a env.LANGUAGE 
+			   '
 		   }
 	   }
 	   stage('C') {
