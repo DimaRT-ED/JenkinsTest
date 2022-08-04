@@ -5,7 +5,8 @@ pipeline {
 	   stage('Entry'){
 		   steps {
 			   sh '''
-			   echo U chouse to run a env.LANGUAGE 
+			   echo U chouse to run a ${env.LANGUAGE}
+			   cat README.md
 			   '''
 		   }
 	   }
