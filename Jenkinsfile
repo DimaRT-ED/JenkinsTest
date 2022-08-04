@@ -2,12 +2,9 @@ pipeline {
    agent any
    
    stages {
-	   stage('STAM') {
+	   stage('Entry'){
 		   steps {
-			   script {
-				   sh 'echo "You are in>>> ${WORKSPACE}"'
-				   sh 'echo "Your name is>>> ${USER}"'
-			   }
+			   echo U chouse to run a env.LANGUAGE 
 		   }
 	   }
 	   stage('C') {
@@ -15,7 +12,6 @@ pipeline {
 			   script {
 				   if (env.LANGUAGE == 'C' || env.LANGUAGE == 'All') {
 					   echo 'C file is Running'
-					   echo  'Running C++ code'
 					   sh 'cat c'
 				   }
 			   }
@@ -35,9 +31,8 @@ pipeline {
 		   steps {
 			   script {
 				   if (env.LANGUAGE == 'PYTHON' || env.LANGUAGE == 'All') {
-					   echo 'Python language are Running'
-					   echo  'Python code are Running'
-					   sh "cat python"
+					   echo  'Python file is Running'
+					   sh 'cat python'
 				   }
 			   }
 		   }
