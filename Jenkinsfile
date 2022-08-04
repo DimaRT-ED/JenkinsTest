@@ -2,11 +2,6 @@ pipeline {
    agent any
    
    stages {
-	   stage('Clone Sources') {
-		   steps {
-			   checkout scm
-		   }
-	   }
 	   stage('STAM') {
 		   steps {
 			   script {
